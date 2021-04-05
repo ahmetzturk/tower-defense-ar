@@ -43830,6 +43830,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4744519658923456609}
+  - component: {fileID: 8600459300530014421}
+  - component: {fileID: 8808110527737543387}
   m_Layer: 8
   m_Name: Health Bar
   m_TagString: Untagged
@@ -43852,6 +43854,32 @@ Transform:
   m_Father: {fileID: 4527377347391372}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8600459300530014421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6310070680069328327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa1b6745edc61a74195e4905593d5885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8808110527737543387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6310070680069328327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcef40e0936cb88449e1d333daeefd53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rectTransform: {fileID: 8238497281261024157}
+  health: {fileID: 8878197343897516842}
 --- !u!1 &7466014299177313850
 GameObject:
   m_ObjectHideFlags: 0

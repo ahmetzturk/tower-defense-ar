@@ -1,4 +1,4 @@
-﻿using TowerDefense.Attribues;
+﻿using TowerDefense.Attributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

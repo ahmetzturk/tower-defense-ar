@@ -3,55 +3,91 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace TowerDefence.Manager
+namespace TowerDefense.Manager
 {
     public class GameManager : MonoBehaviour
     {
-        static Button[] buttons;
+        private static GameManager instance;
+
+        private GameObject baseObject;
+
+        private Button[] buttons;
         bool isWinEditor = Application.platform == RuntimePlatform.WindowsEditor;
 
+        public static GameManager Instance 
+        { 
+            get
+            {
+                if(instance == null)
+                {
+                    instance = new GameObject("GameManager").AddComponent<GameManager>();
+                }
+                return instance;
+            }
+        }
+
+        public GameObject BaseObject { get => baseObject; }
 
         private void Awake()
         {
-            buttons = GameObject.FindObjectsOfType<Button>();
-        }
+            buttons = FindObjectsOfType<Button>();
+        }       
 
         private void Start()
         {
+            baseObject = GameObject.FindWithTag("Base");
             if (!isWinEditor)
             {
-                SetPassiveAll();
+                SetPassiveAllButtons();
             }
         }
 
         private void OnEnable()
         {
-            PlaceObjectsOnPlane.onPlacedObject += SetActiveAll;
+            instance = this;
+            PlaceObjectsOnPlane.onPlacedObject += SetActiveAllButtons;
         }
 
         private void OnDisable()
         {
-            PlaceObjectsOnPlane.onPlacedObject -= SetActiveAll;
+            PlaceObjectsOnPlane.onPlacedObject -= SetActiveAllButtons;
         }
 
-        public static void SetActiveAll()
+        public void SetActiveAllBaseScripts()
+        {
+            MonoBehaviour[] scripts = baseObject.GetComponents<MonoBehaviour>();
+            // disables base scripts (lean touch)
+            foreach (var script in scripts)
+            {
+                script.enabled = true;
+            }
+        }
+
+        public void SetPassiveAllBaseScripts()
+        {
+            MonoBehaviour[] scripts = baseObject.GetComponents<MonoBehaviour>();
+            // disables base scripts (lean touch)
+            foreach (var script in scripts)
+            {
+                script.enabled = false;
+            }
+        }
+
+        // enables all buttons
+        public void SetActiveAllButtons()
         {
             foreach (var button in buttons)
             {
                 button.enabled = true;
-
             }
         }
 
-        public static void SetPassiveAll()
+        public void SetPassiveAllButtons()
         {
             foreach (var button in buttons)
             {
                 button.enabled = false;
-
             }
         }
-
-
     }
 }

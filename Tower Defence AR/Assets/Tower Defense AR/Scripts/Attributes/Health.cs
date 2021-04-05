@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TowerDefense.Attribues
+namespace TowerDefense.Attributes
 {
     public class Health : MonoBehaviour
     {
@@ -30,11 +30,17 @@ namespace TowerDefense.Attribues
         public void TakeDamage(float damage)
         {
             healthPoints = Mathf.Max(0, healthPoints -= damage);
+            // 
         }
 
         public float GetHealthPoints()
-        {
+        {                     
             return healthPoints;
+        }
+
+        public float GetHealthPercentage()
+        {
+            return healthPoints / maxHealthPoints;
         }
 
         public float GetMaxHealthPoints()

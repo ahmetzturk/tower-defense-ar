@@ -161,6 +161,7 @@ GameObject:
   - component: {fileID: 4512548217939763812}
   - component: {fileID: 8582844080384520470}
   - component: {fileID: 1741463553088797023}
+  - component: {fileID: 259729810373315615}
   m_Layer: 10
   m_Name: RocketTower_0
   m_TagString: Untagged
@@ -260,6 +261,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcfb0ea3b4a1a8d40b36a61e41dce25f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &259729810373315615
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361402013487122}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6443539, y: 2.0024314, z: 1}
+  m_Center: {x: 0.04178369, y: 0.5012157, z: 0}
 --- !u!1 &1515290547419108
 GameObject:
   m_ObjectHideFlags: 0

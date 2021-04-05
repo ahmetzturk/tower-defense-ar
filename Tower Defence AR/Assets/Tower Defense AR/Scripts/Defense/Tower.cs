@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TowerDefence.Defence
+namespace TowerDefense.Defense
 {
     public class Tower : MonoBehaviour
     {
