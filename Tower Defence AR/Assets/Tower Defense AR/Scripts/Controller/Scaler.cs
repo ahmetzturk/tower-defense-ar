@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TowerDefense.Core;
 using UnityEngine;
 
 namespace TowerDefense.Controller
@@ -7,9 +8,10 @@ namespace TowerDefense.Controller
     public class Scaler : MonoBehaviour
     {
         private Transform baseTransform;
-        private void OnEnable()
+        private void Start()
         {
-            baseTransform = GameObject.FindWithTag("Base").transform;
+            baseTransform = GameManager.Instance.BaseObject.transform;
+            transform.localScale = baseTransform.localScale;
             transform.parent = baseTransform;
         }
     }

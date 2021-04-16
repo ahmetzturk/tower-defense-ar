@@ -11,10 +11,16 @@ namespace TowerDefense.Core
         private GameObject objectToPool;
         [SerializeField]
         private float poolSize;
+        private Transform baseObjectTransform;
 
         private void Awake()
         {
             SetPooledObjects();
+        }
+
+        private void Start()
+        {
+            baseObjectTransform = GameManager.Instance.BaseObject.transform;
         }
 
         private void SetPooledObjects()
@@ -23,6 +29,7 @@ namespace TowerDefense.Core
             for (int i = 0; i < poolSize; i++)
             {             
                 GameObject obj = Instantiate(objectToPool, transform);
+                //obj.transform.localScale = baseObjectTransform.localScale;
                 obj.SetActive(false);
                 pooledObjects.Enqueue(obj);              
             }

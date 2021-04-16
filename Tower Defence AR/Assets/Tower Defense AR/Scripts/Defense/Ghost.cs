@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TowerDefense.Manager;
+using TowerDefense.Core;
 using UnityEngine;
 
 namespace TowerDefense.Defense
@@ -9,19 +9,24 @@ namespace TowerDefense.Defense
     {
         private Vector3 currentMousePos;
         private Vector3 prevMousePos = Vector3.zero;
+        [SerializeField] private GameObject towerPrefab = null;
         [SerializeField] private float speed = 10f;
         private int myLayer;
+        private Transform baseObjectTransform;
 
         private void Awake()
         {
             string myLayerName = LayerMask.LayerToName(gameObject.layer);
             myLayer = LayerMask.GetMask(myLayerName);
+            baseObjectTransform = GameManager.Instance.BaseObject.transform;
+            transform.localScale = baseObjectTransform.localScale;
         }
 
         private void Update()
         {
             Drag();
             DoRaycast();
+            speed = baseObjectTransform.localScale.x * 1000;
         }
 
         private void DoRaycast()
@@ -29,14 +34,16 @@ namespace TowerDefense.Defense
             RaycastHit hit;
             if (Physics.Raycast(transform.position, -transform.up, out hit, Mathf.Infinity, myLayer))
             {
-                if (hit.transform.GetChild(0).gameObject.activeSelf == false)
-                    CreateTower(hit);
+                Destroy(hit.collider.gameObject);
+                CreateTower(hit);
             }
         }
 
         private void CreateTower(RaycastHit hit)
         {
-            hit.collider.gameObject.GetComponent<Tower>().CreateTower();
+            GameObject tower = Instantiate(towerPrefab, hit.point, Quaternion.identity);
+            tower.transform.localScale = GameManager.Instance.BaseObject.transform.localScale;
+            tower.transform.parent = GameManager.Instance.BaseObject.transform;
             // enables all buttons again
             GameManager.Instance.SetActiveAllButtons();
             CancelGhost cancelGhost = FindObjectOfType<CancelGhost>();

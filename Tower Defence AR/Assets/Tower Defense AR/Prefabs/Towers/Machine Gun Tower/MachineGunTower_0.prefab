@@ -18891,7 +18891,6 @@ GameObject:
   - component: {fileID: 7568801143663799935}
   - component: {fileID: 2632592951960948894}
   - component: {fileID: 8580290060553724834}
-  - component: {fileID: 4871900876399097948}
   - component: {fileID: 4798596203331907588}
   m_Layer: 11
   m_Name: MachineGunTower_0
@@ -18947,9 +18946,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94b13c1440b86654a8f0018930854c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeDistance: 20
+  rangeDistance: 10
   fireEffect: {fileID: 198895463405124220}
-  shootInterval: 2.5
+  shootInterval: 3.5
   projectilePoint: {fileID: 4457715277627928}
 --- !u!114 &2632592951960948894
 MonoBehaviour:
@@ -18980,18 +18979,6 @@ MonoBehaviour:
   objectToPool: {fileID: 1977158881363050, guid: 72e1e24ef8fb946919c36d00b92365eb,
     type: 3}
   poolSize: 5
---- !u!114 &4871900876399097948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401014823036408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcfb0ea3b4a1a8d40b36a61e41dce25f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &4798596203331907588
 BoxCollider:
   m_ObjectHideFlags: 0

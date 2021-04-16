@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TowerDefense.Core;
 
 namespace TowerDefense.Attack
 {
@@ -11,6 +12,12 @@ namespace TowerDefense.Attack
         [SerializeField] ProjectileSettings projectileData;
         [SerializeField] private float eventuallyDeactiveTime = 10f;
         private float timeSinceShooted;
+        private Transform baseObjectTransform;
+
+        private void Start()
+        {
+            baseObjectTransform = GameManager.Instance.BaseObject.transform;
+        }
 
         private void OnEnable()
         {
@@ -34,7 +41,7 @@ namespace TowerDefense.Attack
 
         private void Move()
         {
-            transform.position += transform.forward * projectileData.speed * Time.deltaTime;
+            transform.position += transform.forward * projectileData.speed * Time.deltaTime * baseObjectTransform.localScale.x;
         }
 
         private void OnTriggerEnter(Collider other)

@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 136107846089498568}
   - component: {fileID: 54298539718872334}
   - component: {fileID: 8873888051134866218}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: RocketGhost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,6 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5924e167adbf74c4396af4cf5e7b8a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1361402013487122, guid: afd8cfe3809484aac81a3f4f39b80ca5,
+    type: 3}
   speed: 1000
 --- !u!1 &1582035826446864
 GameObject:

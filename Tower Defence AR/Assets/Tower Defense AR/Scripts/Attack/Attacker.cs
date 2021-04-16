@@ -16,10 +16,12 @@ namespace TowerDefense.Attack
         private Rotater rotater;
         private Transform turret;
         private float lastShootTime = Mathf.Infinity;
+        private Transform baseObjectTransform;
         private void Awake()
         {
             rotater = GetComponent<Rotater>();
             turret = rotater.Turret;
+            baseObjectTransform = GameManager.Instance.BaseObject.transform;
         }
 
         private void Update()
@@ -70,8 +72,8 @@ namespace TowerDefense.Attack
             {
                 if (hit.transform.CompareTag("Enemy") && lastShootTime > shootInterval)
                 {
-                    if(fireEffect != null)
-                        fireEffect.Play();
+                   // if(fireEffect != null)
+                    //    fireEffect.Play();
                     lastShootTime = 0;
                     GameObject projectile = GetComponent<PoolProjectile>().GetPooledObject();
                     projectile.transform.SetPositionAndRotation(

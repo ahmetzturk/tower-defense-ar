@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 136187491898878368}
   - component: {fileID: 54009860042693116}
   - component: {fileID: -9164173334646549521}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: MachineGunGhost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,6 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5924e167adbf74c4396af4cf5e7b8a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1401014823036408, guid: 639c49a7820a549c5822f7b768abc5ac,
+    type: 3}
   speed: 1000
 --- !u!1 &1819557052583670
 GameObject:

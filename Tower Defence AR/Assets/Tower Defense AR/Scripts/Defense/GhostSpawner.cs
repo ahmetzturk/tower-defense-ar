@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TowerDefense.Manager;
+using TowerDefense.Core;
 using UnityEngine;
 using UnityEngine.UI;
 

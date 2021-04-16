@@ -28752,7 +28752,7 @@ GameObject:
   - component: {fileID: 1482255255510840471}
   - component: {fileID: -7422154060502384461}
   - component: {fileID: 8307436298970138440}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Super Hovercopter
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -28788,10 +28788,10 @@ NavMeshAgent:
   m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.2
-  m_Speed: 3
+  m_Speed: 12
   m_Acceleration: 20
   avoidancePriority: 85
-  m_AngularSpeed: 360
+  m_AngularSpeed: 36
   m_StoppingDistance: 0.2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1

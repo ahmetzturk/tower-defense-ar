@@ -160,7 +160,6 @@ GameObject:
   - component: {fileID: 4851055107647531191}
   - component: {fileID: 4512548217939763812}
   - component: {fileID: 8582844080384520470}
-  - component: {fileID: 1741463553088797023}
   - component: {fileID: 259729810373315615}
   m_Layer: 10
   m_Name: RocketTower_0
@@ -216,9 +215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94b13c1440b86654a8f0018930854c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeDistance: 20
+  rangeDistance: 10
   fireEffect: {fileID: 0}
-  shootInterval: 2.5
+  shootInterval: 3.5
   projectilePoint: {fileID: 4357798972921266}
 --- !u!114 &4512548217939763812
 MonoBehaviour:
@@ -249,18 +248,6 @@ MonoBehaviour:
   objectToPool: {fileID: 1977158881363050, guid: 72e1e24ef8fb946919c36d00b92365eb,
     type: 3}
   poolSize: 5
---- !u!114 &1741463553088797023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1361402013487122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcfb0ea3b4a1a8d40b36a61e41dce25f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &259729810373315615
 BoxCollider:
   m_ObjectHideFlags: 0

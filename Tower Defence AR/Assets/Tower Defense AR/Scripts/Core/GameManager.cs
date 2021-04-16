@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace TowerDefense.Manager
+namespace TowerDefense.Core
 {
     public class GameManager : MonoBehaviour
     {

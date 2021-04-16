@@ -10,6 +10,7 @@ public class PlaceObjectsOnPlane : MonoBehaviour
     [SerializeField]
     [Tooltip("Instantiates this prefab on a plane at the touch location.")]
     GameObject placedPrefab;
+    [SerializeField] private GameObject [] objectsToActivate = null;
 
     /// <summary>
     /// The prefab to instantiate on touch.
@@ -70,6 +71,10 @@ public class PlaceObjectsOnPlane : MonoBehaviour
                     if (onPlacedObject != null)
                     {
                         onPlacedObject();
+                        foreach (var objectToActivate in objectsToActivate)
+                        {
+                            objectToActivate.SetActive(true);
+                        }
                     }
                 }
             }

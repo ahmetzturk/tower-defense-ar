@@ -16,10 +16,10 @@ TagManager:
   - UI
   - 
   - 
+  - TowerArea
   - Raycastable
-  - LaserTower
-  - RocketTower
-  - MachineGunTower
+  - 
+  - 
   - 
   - 
   - 

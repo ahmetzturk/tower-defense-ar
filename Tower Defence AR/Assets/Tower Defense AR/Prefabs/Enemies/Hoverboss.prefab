@@ -9528,7 +9528,7 @@ GameObject:
   - component: {fileID: -3610573560324829588}
   - component: {fileID: 8878197343897516842}
   - component: {fileID: -3398392341167505987}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Hoverboss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -9564,10 +9564,10 @@ NavMeshAgent:
   m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.6
-  m_Speed: 1.2
+  m_Speed: 12
   m_Acceleration: 20
   avoidancePriority: 50
-  m_AngularSpeed: 360
+  m_AngularSpeed: 36
   m_StoppingDistance: 0.2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1

@@ -11,6 +11,7 @@ namespace TowerDefense.Core
 
         private void Start()
         {
+            print(gameObject.name);
             poolManager = GameObject.FindWithTag("PoolManager").GetComponent<PoolManager>();
             StartCoroutine(SpawnObject());          
         }
